@@ -1,0 +1,36 @@
+/* src/app/app.component.scss */
+
+:host {
+  display: block;
+  padding: 20px;
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: #333;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+nav {
+  margin-bottom: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #007bff;
+  margin-right: 15px;
+  font-weight: bold;
+}
+
+nav a.active {
+  color: #0056b3;
+}
+
+p {
+  padding: 10px;
+  background-color: #e9ecef;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+}

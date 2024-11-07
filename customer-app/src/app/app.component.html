@@ -1,0 +1,10 @@
+<h1>Welcome to the Customer App</h1>
+
+<nav>
+  <a routerLink="/customer" routerLinkActive="active">Go to Customer Info</a>
+</nav>
+
+<!-- Display a message when additional data is set -->
+<p *ngIf="extraRouteEnabled">Extra route is available. Navigate to "/customer/extra".</p>
+
+<router-outlet></router-outlet>
