@@ -8,15 +8,16 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class CustomerAuthGuard implements CanActivate {
+
   constructor(private communicationService: CommunicationService, private router: Router) {}
 
   canActivate(): Observable<boolean> {
     return this.communicationService.getData().pipe(
       map(data => {
-        if (data && data.customerId) {
+        if (data.customerId) {
           return true;
         } else {
-          this.router.navigate(['/']);
+          this.router.navigate(['/customer']);
           return false;
         }
       })

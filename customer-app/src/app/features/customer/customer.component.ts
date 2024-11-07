@@ -1,24 +1,21 @@
-// src/app/features/customer/customer-info/customer-info.component.ts
 import { Component, OnInit } from '@angular/core';
-import {CommunicationService} from "../../services/communication.service";
+import { CommunicationService } from '../../services/communication.service';
 
 @Component({
-  selector: 'app-customer-info',
-  templateUrl: './customer-info.component.html',
-  standalone: true,
-  styleUrls: ['./customer-info.component.scss']
+  selector: 'app-customer',
+  templateUrl: './customer.component.html',
+  styleUrls: ['./customer.component.scss']
 })
-export class CustomerInfoComponent implements OnInit {
-  customerId: number | null = null;
+export class CustomerComponent implements OnInit {
+  customerId: number | undefined;
+  extraRouteEnabled: boolean = false;
 
   constructor(private communicationService: CommunicationService) {}
 
   ngOnInit(): void {
     this.communicationService.getData().subscribe(data => {
-      if (data) {
-        this.customerId = data.customerId;
-        console.log('Customer ID:', this.customerId);
-      }
+      this.customerId = data.customerId;
+      this.extraRouteEnabled = !!data.extraRoute;
     });
   }
 }

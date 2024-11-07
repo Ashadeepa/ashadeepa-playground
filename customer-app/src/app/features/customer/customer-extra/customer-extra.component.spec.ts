@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { CustomerInfoComponent } from './customer-info.component';
+import { CustomerExtraComponent } from './customer-extra.component';
 import { CommunicationService } from '../../../services/communication.service';
 import { of } from 'rxjs';
 
 describe('CustomerInfoComponent', () => {
-  let component: CustomerInfoComponent;
-  let fixture: ComponentFixture<CustomerInfoComponent>;
+  let component: CustomerExtraComponent;
+  let fixture: ComponentFixture<CustomerExtraComponent>;
   let communicationService: CommunicationService;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [CustomerInfoComponent],
+      declarations: [CustomerExtraComponent],
       providers: [CommunicationService]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(CustomerInfoComponent);
+    fixture = TestBed.createComponent(CustomerExtraComponent);
     component = fixture.componentInstance;
     communicationService = TestBed.inject(CommunicationService);
   });
