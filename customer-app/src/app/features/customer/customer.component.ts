@@ -3,10 +3,10 @@ import { Component, OnInit } from '@angular/core';
 import {CommunicationService} from "../../services/communication.service";
 
 @Component({
-  selector: 'app-customer-info',
-  templateUrl: './customer-info.component.html',
+  selector: 'app-customer',
+  templateUrl: './customer.component.html',
   standalone: true,
-  styleUrls: ['./customer-info.component.scss']
+  styleUrls: ['./customer.component.scss']
 })
 export class CustomerInfoComponent implements OnInit {
   customerId: number | null = null;
